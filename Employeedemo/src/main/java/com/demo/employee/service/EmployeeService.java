@@ -42,7 +42,7 @@ public class EmployeeService {
 	    	
 	    	
 	    	
-	    	TaxCalculator.calculateTax(employee2.getSalary(), employee2.getDoj());
+	  //  	TaxCalculator.calculateTax(employee2.getSalary(), employee2.getDoj());
 	    
 	    	
 	    	return employee2;

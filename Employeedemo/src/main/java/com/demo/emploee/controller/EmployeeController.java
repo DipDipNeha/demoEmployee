@@ -42,7 +42,15 @@ public class EmployeeController {
 	        
 	        return ResponseEntity.ok(newProduct);
 	    }
-	    
+
+	 
+	    @GetMapping("/getallemployeetax")
+	    public List<Employee> getAllEmployeeDetails(@Valid @PathVariable  Employee employee) {
+	        List<Employee> newProduct = employeeServices.getAllEmployee(employee);
+	        
+	        
+	        return (List<Employee>) ResponseEntity.ok(newProduct);
+	    }
 	    
 	    
 

@@ -34,6 +34,12 @@ public class EmployeeService {
 	    public Employee  getEmployeeDetaiksWithTax( Employee employee) {
 	    	Employee employee2=employeeRepository.findByemployeeId(employee.getEmployeeId());
 	
+	    	   	
+	    	employee2.setTax(TaxCalculator.calculateTax(employee2.getSalary(), employee2.getDoj())+"");
+	    	employee2.setTaxYear(new Date());
+	    	
+	    	return employee2;
+	    	
 	    	
 	    	
 	    	TaxCalculator.calculateTax(employee2.getSalary(), employee2.getDoj());
